@@ -1,25 +1,51 @@
-{%extends 'base.html'%} 
+{%extends 'base.html'%}
 {% block content %}
 <div class="container">
 
-  <div class="row">
-    {% if imgs%}
-      <h2>Found {{ imgs|length }} of searched term {{message}}</h2>
-    {% else %}
-      <h2> Found 0 images for the search term {{message}}</h2>
-    {% endif %}
+    <div class="row">
+        {% if imgs%}
+        <h2>Found {{ imgs|length }} of searched term {{message}}</h2>
+        {% else %}
+        <h2> Found 0 images for the search term {{message}}</h2>
+        {% endif %}
 
-  </div>
+    </div>
 
-  <div class="row">
+    <div class="container-fluid">
+        {% for img in imgs %}
+        <div class="col-md-4">
+            <a href="" class="" data-toggle="modal" data-target="#exampleModalCenter{{img.id}}"><img
+                    src="{{img.image.url}}" alt="wagwan" width="400px"></a>
 
-  {% if imgs %}
-    {% for img in imgs %}
-      <div class="col-sm-6 col-md-3">
-          <h1>{{img.imageName}}</h1>
-      </div>
-    {% endfor %}
-  {% endif %}
-  </div>
+            <div class="modal fade" id="exampleModalCenter{{img.id}}" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header row">
+                            <div class="col-md-8">
+                                <h3 class="modal-title" id="exampleModalLongTitle">{{img.imageName}}</h3>
+                            </div>
+                            <div class="col-md-4">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button></div>
+                        </div>
+                        <div class="modal-body">
+                            <img src="{{img.image.url}}" alt="wagwan" width="500px">
+                            <br><br>
+                            <p> <span class="text-info"><strong>Location:</strong></span> {{img.imageLocation}}</p>
+                            <p><span class="text-info"> <strong> Category:</strong></span> {{img.imageCategory}}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+
 </div>
 {% endblock %}
