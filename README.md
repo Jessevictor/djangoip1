@@ -55,4 +55,27 @@ python3 manage.py makemigrations garage
 ```
 then run the command below;
 
+python3 manage.py migrate
+```
+## Run the app
+To run the application on your development machine,
+
+```
+python3 manage.py runserver
+```
+## Running Tests
+To run tests
+
+```
+python3 manage.py test
+```
+
+## Technologies Used
+- Django
+- Python
+- Html
+- Css
+- Javascript
+- Bootstrap
+## User stories
 ```
