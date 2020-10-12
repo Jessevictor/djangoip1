@@ -41,3 +41,18 @@ create database gallery
 
 ## Install dependencies
 To install the requirements from requirements.txt file,
+
+```
+pip install -r requirements.txt
+```
+
+## Create Database migrations
+Making migrations on postgres using django
+run 
+
+```
+python3 manage.py makemigrations garage
+```
+then run the command below;
+
+```
