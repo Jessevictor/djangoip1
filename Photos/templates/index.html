@@ -1,27 +1,43 @@
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<div class="home">
 {%extends 'base.html'%}
-img:hover {
-    background-color: yellow;
-  }
 
+ 
 {%block content%}
-{{ block.super}}
 
-<h1 class="text-center py-4"><a href={%url 'gallery' %}>See more</a></h1>
+
+ 
+<h1 class="text-center py-4" style="font-family: 'Indie Flower', cursive;"><a href={%url 'gallery' %}>See more</a></h1>
 <!--Zoom effect-->
-<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-    <div class="hovereffect">
-        <img class="img-responsive" src="../static/images/landscape2.jpg"alt="">
-        <div class="overlay">
-           <h2>Hover effect 3</h2>
-           <a class="info" href="#">link here</a>
+<div class="container">
+    <br><br>
+<br><br>
+<div class="row">
+
+    <div class="col-sm-6 col-xs-12">
+        <div class="hovereffect">
+            <img class="img-responsive" src= "../static/images/landscape4.jpg" alt="landscape" height="100px" width="100%">
+            <div class="overlay">
+               <h2>Hover effect 3</h2>
+               <a class="info" >Just-Home</a>
+            </div>
         </div>
     </div>
-</div>
+        <div class="col-sm-6 col-xs-12">
+        <div class="hovereffect">
+            <img class="img-responsive" src= "../static/images/landscape3.jpg" alt="landscape" height="100px" width="100%">
+            <div class="overlay">
+               <h2>Hover effect 3</h2>
+               <a class="info" >Just-Home</a>
+            </div>
+        </div>
+    </div>
+    
 
-<br><br>
-<img src="../static/images/landscape4.jpg" alt="landscape2" height="200px" width="100%">
-<br><br>
-<img src="../static/images/landscape3.jpg" alt="landscape2" height="200px" width="100%">
-<br><br>
+
+</div>
+</div>
+</div>
+{{ block.super}}
 {% endblock %}
 

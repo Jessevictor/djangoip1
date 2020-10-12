@@ -74,3 +74,6 @@
     -ms-transform: scale(1);
     transform: scale(1);
   }
+  .home{
+      background-color: #212121;
+  }
