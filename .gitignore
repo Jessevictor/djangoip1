@@ -1,2 +1,2 @@
-virtual
-__Pycache__
+virtual/
+*.pyc
