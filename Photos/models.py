@@ -23,6 +23,9 @@ class gallery(models.Model):
 
     def save_gallery(self):
         self.save()
+    
+    def delete(self):
+        self.delete()
 
 
 class Location(models.Model):
@@ -33,6 +36,10 @@ class Location(models.Model):
 
     def save_location(self):
         self.save()
+    def delete(self):
+        self.delete()
+    
+    
 
 
 class Category(models.Model):
@@ -43,3 +50,5 @@ class Category(models.Model):
 
     def save_Category(self):
         self.save()
+    def delete(self):
+        self.delete()
