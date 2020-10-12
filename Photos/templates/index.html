@@ -1,10 +1,11 @@
 {%extends 'base.html'%}
- {%block content%}
- {{ block.super}}
 
+{%block content%}
+<div class="home" style="background-color: grey;">
+{{ block.super}}
 
-<h1>My gallery</h1>
-<button><a href={%url 'gallery' %}>View Gallery</a></button>
+<h1 class="text-center py-4"><a href={%url 'gallery' %}>See more</a></h1>
 
 
 {% endblock %}
+</div>

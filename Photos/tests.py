@@ -13,7 +13,7 @@ class GalleryTestClass(TestCase):
             imageCategory_name='Business')
         self.new_imageCategory.save()
 
-        self.new_pic = gallery(image='image.jpeg', imageName='fikita', imageDescription='fikita akona corona',
+        self.new_pic = gallery(image='image.jpeg', imageName='screenshot', imageDescription='Just a way in and out',
                                imageLocation=self.new_imageLocation, imageCategory=self.new_imageCategory)
         self.new_pic.save()
 
