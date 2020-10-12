@@ -4,8 +4,8 @@
 <div class="container-fluid">
     {% for image in my_image %}
     <div class="col-md-4">
-        <a href="" class="" data-toggle="modal" data-target="#exampleModalCenter{{image.id}}"><img src="{{image.image.url}}"
-                alt="wagwan" width="400px"></a>
+        <a href="" class="" data-toggle="modal" data-target="#exampleModalCenter{{image.id}}"><img
+                src="{{image.image.url}}" alt="wagwan" width="400px"></a>
 
         <div class="modal fade" id="exampleModalCenter{{image.id}}" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -27,8 +27,15 @@
                         <p><span class="text-info"> <strong> Category:</strong></span> {{image.imageCategory}}</p>
                     </div>
                     <div class="modal-footer">
+                        <div class="row">
+                            <div class="col-md-">
+                                <input type="text" class="form-control input-md responsive" value="link">
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-primary">Copy</button>
+                            </div>
+                        </div>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Copy</button>
                     </div>
                 </div>
             </div>
