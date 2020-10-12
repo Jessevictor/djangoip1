@@ -19,5 +19,5 @@ function myFunction() {
   
     document.execCommand("copy");
   
-    alert("Copied the text: " + copyText.value);
+    alert("Copied Link: " + copyText.value);
   }
