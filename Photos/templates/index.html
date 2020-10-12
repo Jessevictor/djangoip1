@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+ {%block content%}
+ {{ block.super}}
+
+
+<h1>My gallery</h1>
+<button><a href={%url 'gallery' %}>View Gallery</a></button>
+
+
+{% endblock %}
