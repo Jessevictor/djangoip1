@@ -1,13 +1,12 @@
-<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kaushan+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
 <div class="home">
 {%extends 'base.html'%}
 
  
 {%block content%}
-
-
- 
-<h1 class="text-center py-4" style="font-family: 'Indie Flower', cursive;"><a href={%url 'gallery' %}>See more</a></h1>
+<h1 class="H1" style="text-align: center; color:aqua;  font-family: 'Berkshire Swash', cursive;">  Meet Gallery </h1>
+<h2 class="H2" style="text-align: center; color:aliceblue"> A light and fast gallery app designed to work offline on your Android Go phone.</h2>
 <!--Zoom effect-->
 <div class="container">
     <br><br>
@@ -18,8 +17,8 @@
         <div class="hovereffect">
             <img class="img-responsive" src= "../static/images/landscape4.jpg" alt="landscape" height="100px" width="100%">
             <div class="overlay">
-               <h2>Hover effect 3</h2>
-               <a class="info" >Just-Home</a>
+               <h2 style="font-family: 'Berkshire Swash', cursive;">Just for You</h2>
+               <a class="info" href={%url 'gallery' %}>View More</a>
             </div>
         </div>
     </div>
@@ -27,8 +26,8 @@
         <div class="hovereffect">
             <img class="img-responsive" src= "../static/images/landscape3.jpg" alt="landscape" height="100px" width="100%">
             <div class="overlay">
-               <h2>Hover effect 3</h2>
-               <a class="info" >Just-Home</a>
+               <h2 style="font-family: 'Berkshire Swash', cursive;">More than you can Imagine</h2>
+               <a class="info" href={%url 'gallery' %}>View More</a>
             </div>
         </div>
     </div>
